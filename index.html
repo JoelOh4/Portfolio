@@ -7,10 +7,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-900">
+    <!-- First section with BG image -->
     <section>
         <div class="relative bg-cover bg-center h-screen" style="background-image: url('./assets/Images/bg_img_dark_mountain.avif');">
             <!-- Navbar -->
-            <nav class="bg-blue-950 shadow-md py-4 w-full">
+            <!-- <nav class="absolute top-0 left-0 bg-blue-950 shadow-md py-4 z-10 w-full"> -->
+            <nav class="fixed top-0 left-0 bg-blue-950 shadow-md py-4 z-10 w-full">
                 <div class="max-w-7xl mx-auto px-6 sm:px-8">
                     <div class="flex items-center justify-between">
                         <div class="hidden md:flex space-x-8 justify-center w-full">
@@ -23,54 +25,192 @@
                         </div>
                         <div class="md:hidden flex items-center">
                             <!-- Hamburger Icon for Mobile -->
-                            <button class="text-gray-600 focus:outline-none">
+                            <button id="hamburger" class="text-gray-600 focus:outline-none">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                                 </svg>
                             </button>
+                            <!-- Slide-in Menu for Mobile -->
+                            <div id="mobileMenu" class="absolute top-0 left-0 bg-blue-950 text-white w-64 h-full transform -translate-x-full transition-transform duration-300">
+                                <div class="flex flex-col gap-y-2 px-2 py-4 bg-blue-900">
+                                    <a class="nav-link p-2 rounded-md first-letter:uppercase transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 bg-neutral-900 font-bold" href="/#about">about</a>
+                                    <a class="nav-link p-2 rounded-md first-letter:uppercase transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 text-neutral-200 font-medium" href="/#resume">resume</a>
+                                    <a class="nav-link p-2 rounded-md first-letter:uppercase transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 text-neutral-200 font-medium" href="/#portfolio">portfolio</a>
+                                    <a class="nav-link p-2 rounded-md first-letter:uppercase transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 text-neutral-200 font-medium" href="/#testimonials">testimonials</a>
+                                    <a class="nav-link p-2 rounded-md first-letter:uppercase transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 text-neutral-200 font-medium" href="/#contact">contact</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Desktop Navbar (unchanged) -->
+                            <div class="hidden md:flex space-x-8 justify-center w-full">
+                                <a href="#about" class="text-white hover:text-blue-600"><b>About</b></a>
+                                <a href="#resume" class="text-white hover:text-blue-600"><b>Resume</b></a>
+                                <a href="#portfolio" class="text-white hover:text-blue-600"><b>Portfolio</b></a>
+                                <a href="#testimonials" class="text-white hover:text-blue-600"><b>Testimonials</b></a>
+                                <a href="#contact" class="text-white hover:text-blue-600"><b>Contact</b></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </nav>
             
             <!-- Other content goes here -->
-            <div class="text-center p-10 shadow-lg rounded-lg m-20 bg-white bg-opacity-50 backdrop-blur-md backdrop-opacity-30">
-                <h1 class="text-4xl font-bold">Joel Oh Kai Shun Hiroyuki</h1>
-                <p class="text-gray-600 mt-2">Web Developer | Tech Enthusiast</p>
-                <p class="p-10">Im a big stepper, underground methods. Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                    Explicabo deleniti, ipsa assumenda fuga odio cupiditate aspernatur quas, reiciendis eveniet quos 
-                    consectetur, sint tempora. Magnam quae exercitationem eveniet expedita, quasi molestiae.
-                </p>
-                <div class="flex justify-center space-x-4 mt-4">
-                    <a href="#" target="_blank" class="text-blue-500 hover:underline">GitHub</a>
-                    <a href="https://www.linkedin.com/in/joel-oh-hiroyuki/" target="_blank" class="text-blue-500 hover:underline">LinkedIn</a>
-                    <a href="#" target="_blank" class="text-blue-500 hover:underline">Instagram</a>
+            <div class="flex items-center justify-center min-h-screen z-10 bg-cover bg-center" style="background-image: url('./assets/Images/bg_img_dark_mountain.avif');">
+                <div class="max-w-screen-lg px-4 lg:px-0">
+                    <div class="flex flex-col items-center gap-y-6 rounded-xl bg-gray-800/40 p-10 text-center shadow-lg backdrop-blur-sm m-10">
+                        <h1 class="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">Joel Oh Kai Shun Hiroyuki</h1>
+                        <p class="prose-sm text-stone-200 sm:prose-base lg:prose-lg">Web Developer | Tech Enthusiast</p>
+                        <p class="prose-sm text-stone-200 sm:prose-base lg:prose-lg p-3">I'm a big stepper, underground methods. Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Explicabo deleniti, ipsa assumenda fuga odio cupiditate aspernatur quas, reiciendis eveniet quos 
+                            consectetur, sint tempora. Magnam quae exercitationem eveniet expedita, quasi molestiae.
+                        </p>
+                        <div class="flex justify-center space-x-4">
+                            <a href="https://github.com/JoelOh4" target="_blank" class="text-blue-500 hover:underline">GitHub</a>
+                            <a href="https://www.linkedin.com/in/joel-oh-hiroyuki/" target="_blank" class="text-blue-500 hover:underline">LinkedIn</a>
+                            <a href="#" target="_blank" class="text-blue-500 hover:underline">Instagram</a>
+                        </div>
+                        <div class="flex w-full justify-center gap-x-4">
+                            <!-- Resume Button -->
+                            <a href="/assets/resume.pdf"
+                               class="flex gap-x-2 rounded-full border-2 px-4 py-2 text-sm sm:text-base 
+                                      font-medium text-white bg-none border-orange-500 ring-orange-500 
+                                      ring-offset-gray-700/80 hover:bg-gray-700/80 focus:outline-none 
+                                      focus:ring-2 focus:ring-offset-2">
+                                Resume
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
+                                     stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" 
+                                     class="size-5 text-white sm:size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" 
+                                          d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3">
+                                    </path>
+                                </svg>
+                            </a>
+                            <!-- Contact Button -->
+                            <a href="mailto:joeloh4@gmail.com"
+                               class="flex gap-x-2 rounded-full border-2 px-4 py-2 text-sm sm:text-base 
+                                      font-medium text-white bg-none border-white ring-white 
+                                      ring-offset-gray-700/80 hover:bg-gray-700/80 focus:outline-none 
+                                      focus:ring-2 focus:ring-offset-2">
+                                Contact
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-neutral-800 px-4 py-16 md:py-24 lg:px-8">
+    <!-- About Me section -->
+    <section id="about" class="bg-neutral-800 px-4 py-16 md:py-24 lg:px-8">
         <div class="mx-auto max-w-screen-lg">
-            <div class="grid grid-cols-1 gap-y-4 md:grid-cols-2">
-                <!-- Image Section -->
-                <div class="flex justify-center items-center">
-                    <img src="#" alt="PLACEHOLDER" class="w-full h-auto object-cover">
+            <div class="grid grid-cols-1 gap-y-4 md:grid-cols-3">
+                <!-- Image -->
+                <div class="col-span-1 flex justify-center items-center mr-8">
+                    <img 
+                        src="./assets/Images/joel_1.jpg" 
+                        alt="Profile picture of Joel" 
+                        loading="lazy" 
+                        width="250" 
+                        height="250" 
+                        class="w-full h-auto max-w-[300px] rounded-lg object-cover"
+                    >
                 </div>
                 
-                <!-- About Me Section -->
-                <div class="flex flex-col gap-y-6">
+                <!-- About Me -->
+                <div class="col-span-2 flex flex-col gap-y-6">
                     <h2 class="text-2xl font-semibold text-white mb-4">About Me</h2>
-                    <p class="text-gray-300">I am a SURGEON | I am a SURGEON | I am a SURGEON | I am a SURGEON | I am a SURGEON</p>
-                </div>
+                    <p class="text-gray-300">I am a SURGEON | I am a SURGEON | I am a SURGEON | I am a SURGEON | I am a SURGEON <br>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, ipsa sapiente autem assumenda sunt quis nobis, molestias 
+                    aspernatur ratione voluptates modi, ea eaque esse deleniti fuga quam iure itaque nihil.</p>
+                    <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <!-- Location -->
+                        <li class="col-span-1 flex items-start gap-x-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-blue-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 2.25a7.5 7.5 0 0 1 7.5 7.5c0 4.125-3 7.5-7.5 12-4.5-4.5-7.5-7.875-7.5-12a7.5 7.5 0 0 1 7.5-7.5z" />
+                            <circle cx="12" cy="9" r="2.5" />
+                          </svg>
+                          <span class="text-sm font-bold text-blue-400 hover:text-blue-300 transition">Location:</span>
+                          <span class="text-sm text-gray-300">Singapore, Singapore</span>
+                        </li>
+                      
+                        <!-- Age -->
+                        <li class="col-span-1 flex items-start gap-x-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-blue-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25M3 18.75A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75M6 15h12" />
+                          </svg>
+                          <span class="text-sm font-bold text-blue-400 hover:text-blue-300 transition">Age:</span>
+                          <span class="text-sm text-gray-300">25</span>
+                        </li>
+                      
+                        <!-- Nationality -->
+                        <li class="col-span-1 flex items-start gap-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-5 text-blue-400">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5"></path>
+                              </svg>
+                          <span class="text-sm font-bold text-blue-400 hover:text-blue-300 transition">Nationality:</span>
+                          <span class="text-sm text-gray-300">Japanese / Malaysian</span>
+                        </li>
+                      
+                        <!-- Interests -->
+                        <li class="col-span-1 flex items-start gap-x-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-blue-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21.75l-1.45-1.318C5.4 15.324 2.25 12.228 2.25 9A4.5 4.5 0 0 1 6.75 4.5c2.236 0 4.041 1.687 4.5 3.82A4.5 4.5 0 0 1 14.25 4.5c2.236 0 4.041 1.687 4.5 3.82A4.5 4.5 0 0 1 21.75 9c0 3.228-3.15 6.324-8.55 11.433L12 21.75z" />
+                          </svg>
+                          <span class="text-sm font-bold text-blue-400 hover:text-blue-300 transition">Interests:</span>
+                          <span class="text-sm text-gray-300">Food, Travelling</span>
+                        </li>
+                      
+                        <!-- Study -->
+                        <li class="col-span-1 flex items-start gap-x-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-blue-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5l-7.5-5-7.5 5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 15.5l-7.5-5-7.5 5" />
+                          </svg>
+                          <span class="text-sm font-bold text-blue-400 hover:text-blue-300 transition">Study:</span>
+                          <span class="text-sm text-gray-300 break-words sm:w-full">Singapore Management University</span>
+                        </li>
+                      
+                        <!-- Employment -->
+                        <li class="col-span-1 flex items-start gap-x-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-blue-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 3.75h15M4.5 6.75h15M4.5 9.75h15M4.5 12.75h15M4.5 15.75h15M4.5 18.75h15" />
+                          </svg>
+                          <span class="text-sm font-bold text-blue-400 hover:text-blue-300 transition">Employment:</span>
+                          <span class="text-sm text-gray-300">Open to work</span>
+                        </li>
+                    </ul>
+                </div>                  
             </div>
         </div>
     </section>
     
+    <br>
+
+    <!-- Resume section -->
+    <section id="resume" class="max-w-4xl mx-auto p-5">
+        <h2 class="text-2xl font-semibold mb-4">Resume</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit 
+            adipisci tenetur temporibus et quisquam harum minus soluta. Deserunt 
+            repellendus officiis, odio iste quibusdam eius error nisi eaque facilis facere qui.
+        </p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit 
+            adipisci tenetur temporibus et quisquam harum minus soluta. Deserunt 
+            repellendus officiis, odio iste quibusdam eius error nisi eaque facilis facere qui.
+        </p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit 
+            adipisci tenetur temporibus et quisquam harum minus soluta. Deserunt 
+            repellendus officiis, odio iste quibusdam eius error nisi eaque facilis facere qui.
+        </p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit 
+            adipisci tenetur temporibus et quisquam harum minus soluta. Deserunt 
+            repellendus officiis, odio iste quibusdam eius error nisi eaque facilis facere qui.
+        </p>
+    </section>
 
     <br>
 
-    <section class="max-w-4xl mx-auto p-5">
+    <!-- Portfolio section -->
+    <section id="portfolio" class="max-w-4xl mx-auto p-5">
         <h2 class="text-2xl font-semibold mb-4">Projects</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="bg-white p-4 shadow-md rounded-lg">
@@ -84,14 +224,24 @@
         </div>
     </section>
     
-    <section class="max-w-4xl mx-auto p-5 text-center">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <section id="contact" class="max-w-4xl mx-auto p-5 text-center">
         <h2 class="text-2xl font-semibold mb-4">Contact</h2>
         <p class="text-gray-700">Email: Joeloh4@gmail.com</p>
     </section>
-    
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p>TAG</p>
     
     <footer class="bg-white shadow-md p-5 text-center mt-10">
         <p class="text-gray-600">&copy; 2025 Joel Oh. All rights reserved.</p>
     </footer>
+
+    <!-- Link to the JavaScript file -->
+    <!-- Navbar Hamburger -->
+    <script src="./navbar.js"></script>
 </body>
 </html>

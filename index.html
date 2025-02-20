@@ -62,19 +62,19 @@
                             I'm Joel, an Information Systems student with a passion for full-stack development. Currently working
                             on projects to improve digital experiences, I enjoy combining my technical 
                             skills with creative problem-solving. 
-                            <p class="prose-sm text-stone-200 sm:prose-base lg:prose-lg p-3">
-                                When I'm not coding, you'll find me <b>exploring</b> 
-                                new tech, playing <b>sports</b>, or spending time <b>outdoors</b>.
-                            </p>
+                        </p>
+                        <p class="prose-sm text-stone-200 sm:prose-base lg:prose-lg p-3">
+                            When I'm not coding, you'll find me <b>exploring</b> 
+                            new tech, playing <b>sports</b>, or spending time <b>outdoors</b>.
                         </p>
                         <div class="flex justify-center space-x-4 text-gray-500">
-                            <a href="https://www.linkedin.com/in/joel-oh-hiroyuki/" target="_blank" class="hover:text-neutral-50">
+                            <a href="https://www.linkedin.com/in/joel-oh-hiroyuki/" target="_blank" class="hover:text-neutral-50 text-2xl">
                                 <i class="fab fa-linkedin"></i>
                             </a>
-                            <a href="https://github.com/JoelOh4" target="_blank" class="hover:text-neutral-50">
+                            <a href="https://github.com/JoelOh4" target="_blank" class="hover:text-neutral-50 text-2xl">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="#" target="_blank" class="hover:text-neutral-50">
+                            <a href="#" target="_blank" class="hover:text-neutral-50 text-2xl">
                                 <i class="fab fa-telegram"></i>
                             </a>
                         </div>
@@ -130,9 +130,15 @@
                 <!-- About Me -->
                 <div class="col-span-2 flex flex-col gap-y-6">
                     <h2 class="text-2xl font-semibold text-white mb-4">About Me</h2>
-                    <p class="text-gray-300">
-                        "Good artists copy; great artists steal." - Pablo Picasso
+                    <p class="text-lg italic text-white">
+                        As a <b>Software Developer</b>, I believe in learning from the best—taking inspiration, improving upon ideas, and 
+                        making them my own. I embrace this philosophy in my work, ensuring every project I build is not 
+                        just a copy but an evolution of great ideas.
                     </p>
+                    <div class="bg-gray-800 p-6 rounded-lg text-center text-white shadow-lg">
+                        <p class="text-lg italic">"Good artists copy; great artists steal."</p>
+                        <p class="mt-2 text-sm text-gray-400">— Pablo Picasso</p>
+                    </div>
                     <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                         <!-- Location -->
                         <li class="col-span-1 flex items-start gap-x-2">
@@ -164,9 +170,9 @@
                       
                         <!-- Interests -->
                         <li class="col-span-1 flex items-start gap-x-2">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-blue-400">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21.75l-1.45-1.318C5.4 15.324 2.25 12.228 2.25 9A4.5 4.5 0 0 1 6.75 4.5c2.236 0 4.041 1.687 4.5 3.82A4.5 4.5 0 0 1 14.25 4.5c2.236 0 4.041 1.687 4.5 3.82A4.5 4.5 0 0 1 21.75 9c0 3.228-3.15 6.324-8.55 11.433L12 21.75z" />
-                          </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-blue-400">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21.35l-1.45-1.32C5.4 15.35 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.85-8.55 11.54L12 21.35z" />
+                            </svg>
                           <span class="text-sm font-bold text-blue-400 hover:text-blue-300 transition">Interests:</span>
                           <span class="text-sm text-gray-300">Food, Travelling</span>
                         </li>
@@ -196,24 +202,185 @@
     </section>
     
     <!-- Resume section -->
-    <section id="resume" class="px-4 py-16 md:py-24 lg:px-8">
-        <h2 class="text-2xl font-semibold mb-4">Resume</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit 
-            adipisci tenetur temporibus et quisquam harum minus soluta. Deserunt 
-            repellendus officiis, odio iste quibusdam eius error nisi eaque facilis facere qui.
-        </p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit 
-            adipisci tenetur temporibus et quisquam harum minus soluta. Deserunt 
-            repellendus officiis, odio iste quibusdam eius error nisi eaque facilis facere qui.
-        </p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit 
-            adipisci tenetur temporibus et quisquam harum minus soluta. Deserunt 
-            repellendus officiis, odio iste quibusdam eius error nisi eaque facilis facere qui.
-        </p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit 
-            adipisci tenetur temporibus et quisquam harum minus soluta. Deserunt 
-            repellendus officiis, odio iste quibusdam eius error nisi eaque facilis facere qui.
-        </p>
+    <section class="bg-neutral-100 px-4 py-16 md:py-24 lg:px-8" id="resume">
+        <div class="mx-auto max-w-screen-lg">
+            <!-- Education Section -->
+            <div class="flex flex-col divide-y-2 divide-neutral-300">
+                <div class="grid grid-cols-1 gap-y-4 py-8 md:grid-cols-4">
+                    <div class="col-span-1 flex justify-center md:justify-start">
+                        <div class="h-max relative">
+                            <h2 class="text-xl font-bold uppercase text-neutral-800">Education</h2>
+                            <span class="absolute inset-x-0 -bottom-1 border-b-2 border-orange-400"></span>
+                        </div>
+                    </div>
+                    <div class="col-span-1 flex flex-col md:col-span-3 space-y-8">
+                        <div class="text-center md:text-left">
+                            <h3 class="text-xl font-bold">Singapore Management University</h3>
+                            <div class="flex items-center justify-center gap-x-2 md:justify-start">
+                                <span class="flex-1 text-sm font-medium italic sm:flex-none">Bachelor of Science in Information Systems</span>
+                                <span>•</span>
+                                <span class="flex-1 text-sm sm:flex-none">Business Analytics and Financial Technologies Track</span>
+                            </div>
+                            <p>
+                                Pursuing a dual track in <strong>Business Analytics</strong> and <strong>Financial Technologies</strong>, 
+                                gaining expertise in <strong>data-driven decision-making, financial technologies</strong>, and <strong>software development</strong>. 
+                                Hands-on experience with <strong>database management, system design</strong>, and <strong>full-stack development</strong>.
+                            </p>
+                            <!-- Modules & Projects Section -->
+                            <div>
+                                <h3 class="text-lg font-bold text-neutral-800 pt-4">Modules & Projects</h3>
+                                <ul class="list-disc pl-5 space-y-2">
+                                    <li><strong><u>Data Management:</u></strong> Gained hands-on experience with <strong>data structures</strong>, <strong>databases</strong>, and <strong>data warehousing</strong>, focusing on <strong>data storage, retrieval, and optimization</strong>.</li>
+                                    <li><strong><u>Software Project Management:</u></strong> Learned <strong>project planning, resource allocation, and SCRUM methodology</strong> to manage large-scale software projects.</li>
+                                    <li><strong><u>Data Mining & Business Analytics:</u></strong> Focused on <strong>data analysis techniques, predictive modeling</strong>, and <strong>machine learning</strong> to derive insights from complex data.</li>
+                                    <li><strong><u>Digital Banking Enterprise Architecture:</u></strong> Analyzed the <strong>technology infrastructure</strong> of modern banking systems and explored <strong>digital transformation in the financial sector</strong>.</li>
+                                    <li><strong><u>Final Year Project:</u></strong> Developed a website for <strong>Vertex Holdings</strong> to help connect their clients to each other. Utilized <strong>Django REST Framework</strong> for the backend, a <strong>MySQL database</strong> hosted in the cloud, and a frontend built with <strong>React and Vite</strong> for a fast and responsive user experience.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Work Section -->
+                <div class="grid grid-cols-1 gap-y-4 py-8 md:grid-cols-4">
+                    <div class="col-span-1 flex justify-center md:justify-start">
+                        <div class="h-max relative">
+                            <h2 class="text-xl font-bold uppercase text-neutral-800">Work</h2>
+                            <span class="absolute inset-x-0 -bottom-1 border-b-2 border-orange-400"></span>
+                        </div>
+                    </div>
+                    <div class="col-span-1 flex flex-col md:col-span-3 space-y-8">
+                        <div class="text-center md:text-left">
+                            <h3 class="text-xl font-bold">Developer Intern</h3>
+                            <p class="text-sm font-medium italic">Civil Service College • May 2024 - July 2024</p>
+                            <p>
+                                Automated the organization's application review process by developing an internal web application. 
+                                The team leveraged on Outsystems to streamline workflows, enhancing efficiency. Following the SCRUM methodology 
+                                to fully optimize the software development process.
+                            </p>
+                        </div>
+                        <div class="text-center md:text-left">
+                            <h3 class="text-xl font-bold">Digital Innovation Intern</h3>
+                            <p class="text-sm font-medium italic">Octagon Development Pte Ltd • February 2025 - May 2025</p>
+                            <p>
+                                Improved tracking worktimes of foreign workers on job sites by utilizing Bluetooth Low Energy Beacons. A mobile 
+                                application developed using React Native with the Expo framework to detect Beacons placed on job sites. Better 
+                                tracking workers' entry and exit times.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Skills Section -->
+                <div class="grid grid-cols-1 gap-y-4 py-8 md:grid-cols-4">
+                    <div class="col-span-1 flex justify-center md:justify-start">
+                        <div class="h-max relative">
+                            <h2 class="text-xl font-bold uppercase text-neutral-800">Skills</h2>
+                            <span class="absolute inset-x-0 -bottom-1 border-b-2 border-orange-400"></span>
+                        </div>
+                    </div>
+                    <div class="col-span-1 flex flex-col md:col-span-3">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    
+                            <!-- Spoken Languages -->
+                            <div>
+                                <h3 class="text-lg font-bold text-center">Spoken Languages</h3>
+                                <div class="space-y-2">
+                                    <div>
+                                        <span class="ml-2 text-sm font-medium">English</span>
+                                        <div class="h-5 w-full bg-neutral-300 rounded-full overflow-hidden">
+                                            <div class="h-full bg-orange-400 rounded-full" style="width:100%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="ml-2 text-sm font-medium">Chinese</span>
+                                        <div class="h-5 w-full bg-neutral-300 rounded-full overflow-hidden">
+                                            <div class="h-full bg-orange-400 rounded-full" style="width:50%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="ml-2 text-sm font-medium">Japanese</span>
+                                        <div class="h-5 w-full bg-neutral-300 rounded-full overflow-hidden">
+                                            <div class="h-full bg-orange-400 rounded-full" style="width:20%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Frontend Development -->
+                            <div>
+                                <h3 class="text-lg font-bold text-center">Frontend Development</h3>
+                                <div class="space-y-2">
+                                    <div>
+                                        <span class="ml-2 text-sm font-medium">React</span>
+                                        <div class="h-5 w-full bg-neutral-300 rounded-full overflow-hidden">
+                                            <div class="h-full bg-orange-400 rounded-full" style="width:80%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="ml-2 text-sm font-medium">Tailwind CSS</span>
+                                        <div class="h-5 w-full bg-neutral-300 rounded-full overflow-hidden">
+                                            <div class="h-full bg-orange-400 rounded-full" style="width:50%"></div>
+                                        </div>
+                                    </div>
+                                    <!-- <div>
+                                        <span class="ml-2 text-sm font-medium">REST API</span>
+                                        <div class="h-5 w-full bg-neutral-300 rounded-full overflow-hidden">
+                                            <div class="h-full bg-orange-400 rounded-full" style="width:60%"></div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+    
+                            <!-- Backend Development -->
+                            <div>
+                                <h3 class="text-lg font-bold text-center">Backend Development</h3>
+                                <div class="space-y-2">
+                                    <div>
+                                        <span class="ml-2 text-sm font-medium">Node.js</span>
+                                        <div class="h-5 w-full bg-neutral-300 rounded-full overflow-hidden">
+                                            <div class="h-full bg-orange-400 rounded-full" style="width:80%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="ml-2 text-sm font-medium">Django</span>
+                                        <div class="h-5 w-full bg-neutral-300 rounded-full overflow-hidden">
+                                            <div class="h-full bg-orange-400 rounded-full" style="width:50%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="ml-2 text-sm font-medium">Flask</span>
+                                        <div class="h-5 w-full bg-neutral-300 rounded-full overflow-hidden">
+                                            <div class="h-full bg-orange-400 rounded-full" style="width:40%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Mobile Development -->
+                            <div>
+                                <h3 class="text-lg font-bold text-center">Mobile Development</h3>
+                                <div class="space-y-2">
+                                    <div>
+                                        <span class="ml-2 text-sm font-medium">React Native</span>
+                                        <div class="h-5 w-full bg-neutral-300 rounded-full overflow-hidden">
+                                            <div class="h-full bg-orange-400 rounded-full" style="width:60%"></div>
+                                        </div>
+                                    </div>
+                                    <!-- <div>
+                                        <span class="ml-2 text-sm font-medium">Flutter</span>
+                                        <div class="h-5 w-full bg-neutral-300 rounded-full overflow-hidden">
+                                            <div class="h-full bg-orange-400 rounded-full" style="width:30%"></div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+    
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Portfolio section -->

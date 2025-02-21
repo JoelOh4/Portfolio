@@ -6,6 +6,8 @@
     <title>Joel Oh Resume</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
 </head>
 <body class="bg-gray-100 text-gray-900">
     <!-- First section with BG image -->
@@ -80,7 +82,7 @@
                         </div>
                         <div class="flex w-full justify-center gap-x-4">
                             <!-- Resume Button -->
-                            <a href="/assets/resume.pdf"
+                            <a href="./assets/resume.pdf"
                                 target="_blank"
                                 class="flex gap-x-2 rounded-full border-2 px-4 py-2 text-sm sm:text-base 
                                       font-medium text-white bg-none border-orange-500 ring-orange-500 
@@ -135,10 +137,14 @@
                         making them my own. I embrace this philosophy in my work, ensuring every project I build is not 
                         just a copy but an evolution of great ideas.
                     </p>
-                    <div class="bg-gray-800 p-6 rounded-lg text-center text-white shadow-lg">
-                        <p class="text-lg italic">"Good artists copy; great artists steal."</p>
-                        <p class="mt-2 text-sm text-gray-400">— Pablo Picasso</p>
-                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg text-center text-white shadow-lg relative">
+                        <p class="text-lg italic">
+                            "Good <span class="crossed-out">artists<span class="replacement">painters</span></span> copy; great <span class="crossed-out">artists<span class="replacement" style="transform: rotate(3deg)">painters</span></span> steal."
+                        </p>                        
+                        <p class="mt-2 text-sm text-gray-400">
+                            — Pablo Picasso
+                        </p>
+                    </div>                   
                     <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                         <!-- Location -->
                         <li class="col-span-1 flex items-start gap-x-2">
@@ -390,11 +396,11 @@
             <div class="bg-white p-4 shadow-md rounded-lg">
                 <h3 class="font-bold">Business Portal (Vertex Holdings)</h3>
                 <p class="text-gray-600 text-justify">
-                    We developed a portal to enable clients of Vertex Holdings to connect and learn more about each other. 
+                    Developed a portal to enable clients of Vertex Holdings to connect and learn more about each other. 
                     The project utilized Django Rest Framework for a robust backend API and Vitest for efficient testing. 
                     The result is a seamless, user-friendly platform that fosters interaction and collaboration among clients.
                 </p>
-                <img src="#" alt="FYP IMG">
+                <!-- <img src="#" alt="FYP IMG"> -->
             </div>
             <div class="bg-white p-4 shadow-md rounded-lg">
                 <h3 class="font-bold">Workload Tracker (Octagon Development Pte Ltd)</h3>
@@ -404,7 +410,7 @@
                     work hours in real-time. It leverages technologies like React, Node.js, and MySQL, providing an efficient 
                     and user-friendly solution for managing employee time data.
                 </p>
-                <img src="#" alt="ODPL IMG">
+                <!-- <img src="#" alt="ODPL IMG"> -->
             </div>
         </div>
     </section>

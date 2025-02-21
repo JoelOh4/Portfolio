@@ -1,3 +1,33 @@
 /* .btn-primary {
     @apply bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600;
 } */
+.crossed-out {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.crossed-out::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 0.6em; /* Scales with font size */
+    background: rgba(255, 0, 0, 0.9);
+    filter: blur(3px);
+    transform: rotate(-5deg);
+}
+
+.replacement {
+    position: absolute;
+    left: 10%;
+    bottom: 80%; /* Moves it above dynamically */
+    transform: translateX(-50%);
+    font-size: 0.8em; /* Scales better */
+    font-family: 'Rock Salt', cursive;    
+    color: red;
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.7);
+    font-weight: bold;
+    transform: rotate(-5deg);
+}
